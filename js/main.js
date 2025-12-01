@@ -5,6 +5,7 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     // Add click event listener to each link
     anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function (e) {
         // Prevent default jump behavior
         e.preventDefault();
 
