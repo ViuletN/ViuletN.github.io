@@ -1,0 +1,732 @@
+/* ===== RESET & BASICS ===== */
+/* Universal selector - applies to ALL elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables - reusable values throughout stylesheet */
+:root {
+    --primary-color: #0058ff;
+    --secondary-color: #00c2ff;
+    --dark-bg: #0a0a0a;
+    --light-bg: #ffffff;
+    --text-dark: #1a1a1a;
+    --text-light: #f5f5f5;
+    --gray: #666;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+/* Makes scrolling smooth when clicking navigation links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base styles for entire page */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--light-bg);
+}
+
+/* Container centers content and limits width */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== NAVIGATION ===== */
+/* Fixed navbar stays at top when scrolling */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+/* Navigation container */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo/name styling */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Navigation menu container */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+/* Navigation links */
+.nav-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+/* Navigation link hover effect */
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Hamburger menu (hidden on desktop, shown on mobile) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* Hamburger menu lines */
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    margin: 3px 0;
+    transition: var(--transition);
+}
+
+/* ===== HERO SECTION ===== */
+/* Full-screen introduction section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    text-align: center;
+    padding: 100px 20px 50px;
+}
+
+/* Hero content container */
+.hero-content {
+    color: white;
+}
+
+/* Container for profile photo */
+.hero-image {
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease;
+}
+
+/* Profile photo styling */
+.hero-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover; /* Ensures photo fills circle properly */
+    border: 5px solid white; /* White border around photo */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: var(--transition);
+}
+
+/* Profile photo hover effect */
+.hero-image img:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Main hero title */
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+}
+
+/* Highlighted text (name) */
+.highlight {
+    color: var(--secondary-color);
+}
+
+/* Hero subtitle */
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease 0.2s both;
+}
+
+/* Hero buttons container */
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    animation: fadeInUp 1s ease 0.4s both;
+}
+
+/* ===== BUTTONS ===== */
+/* Base button styles */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+/* Primary button (solid background) */
+.btn-primary {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* Primary button hover effect */
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary button (outlined) */
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+/* Secondary button hover effect */
+.btn-secondary:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* Small button for links */
+.btn-small {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    transition: var(--transition);
+}
+
+/* Small button hover effect */
+.btn-small:hover {
+    background-color: var(--secondary-color);
+}
+
+/* ===== SECTIONS ===== */
+/* Standard section spacing */
+.section {
+    padding: 80px 20px;
+}
+
+/* Dark background sections */
+.section-dark {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+}
+
+/* Section title styling */
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/* Decorative line under section titles */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 1rem auto 0;
+}
+
+/* ===== ABOUT SECTION ===== */
+/* About content container */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* About text paragraphs */
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+/* ===== CV DOWNLOAD BUTTON ===== */
+/* Container for CV button - centers it */
+.cv-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+/* CV Download Button */
+.btn-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 35px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(0, 88, 255, 0.3);
+}
+
+/* CV button hover effect */
+.btn-cv:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 88, 255, 0.4);
+}
+
+/* CV button icon (SVG) */
+.btn-cv svg {
+    transition: var(--transition);
+}
+
+/* Animate icon on hover */
+.btn-cv:hover svg {
+    transform: translateY(3px);
+}
+
+/* ===== RESEARCH SECTION ===== */
+/* Research grid layout */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Individual research card */
+.research-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+/* Dark section research card styling */
+.section-dark .research-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Research card hover effect */
+.research-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark section research card hover */
+.section-dark .research-card:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Research card header (title and date) */
+.research-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+}
+
+/* Research position title */
+.research-header h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    flex: 1;
+}
+
+/* Dark section research title */
+.section-dark .research-header h3 {
+    color: var(--secondary-color);
+}
+
+/* Research date */
+.research-date {
+    color: var(--gray);
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* Dark section research date */
+.section-dark .research-date {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Research location */
+.research-location {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+/* Dark section research location */
+.section-dark .research-location {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Research description */
+.research-description {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+/* Dark section research description */
+.section-dark .research-description {
+    color: var(--text-light);
+}
+
+/* Research tags container */
+.research-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Tag styling (used in both research and projects) */
+.tag {
+    background-color: #e8f4ff;
+    color: var(--primary-color);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+/* Dark section tag styling */
+.section-dark .tag {
+    background-color: rgba(0, 194, 255, 0.2);
+    color: var(--secondary-color);
+}
+
+/* ===== ACADEMIC WORK SECTION ===== */
+/* Academic work container */
+.academic-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Individual academic category (Awards, Publications, etc.) */
+.academic-category {
+    margin-bottom: 3rem;
+}
+
+/* Academic category heading */
+.academic-heading {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Dark section academic heading */
+.section-dark .academic-heading {
+    color: var(--secondary-color);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Container for academic items */
+.academic-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Individual academic item (award, publication, etc.) */
+.academic-item {
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+/* Dark section academic item */
+.section-dark .academic-item {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Academic item hover effect */
+.academic-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateX(5px);
+}
+
+/* Dark section academic item hover */
+.section-dark .academic-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Academic item title */
+.academic-item h4 {
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Dark section academic item title */
+.section-dark .academic-item h4 {
+    color: var(--text-light);
+}
+
+/* Academic item details (journal, date, etc.) */
+.academic-detail {
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Dark section academic detail */
+.section-dark .academic-detail {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Academic item authors */
+.academic-authors {
+    color: var(--gray);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+/* Dark section academic authors */
+.section-dark .academic-authors {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Spacing for buttons in academic items */
+.academic-item .btn-small {
+    margin-top: 1rem;
+    margin-right: 0.5rem;
+}
+
+/* ===== CONTACT SECTION ===== */
+/* Contact content container */
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contact introduction text */
+.contact-text {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Contact form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Form input fields */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    background-color: white;
+    color: var(--text-dark);
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* Placeholder text color */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/* Input field focus state (when clicked/selected) */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Dark section form input styling */
+.section-dark .form-group input,
+.section-dark .form-group textarea {
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.section-dark .form-group input::placeholder,
+.section-dark .form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Social links container */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Social links styling */
+.social-links a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+/* Dark section social links */
+.section-dark .social-links a {
+    color: var(--text-light);
+}
+
+/* Social link hover effect */
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* ===== FOOTER ===== */
+/* Footer styling */
+footer {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem 20px;
+}
+
+/* Copyright text */
+.copyright-text {
+    opacity: 0.7;
+}
+
+/* ===== ANIMATIONS ===== */
+/* Fade in from bottom animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Tablet and mobile styles (screens 768px or smaller) */
+@media (max-width: 768px) {
+    /* Show hamburger menu on mobile */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Mobile navigation menu */
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    /* Show menu when hamburger is clicked (toggled by JavaScript) */
+    .nav-menu.active {
+        display: flex;
+    }
+
+    /* Smaller hero title on mobile */
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    /* Smaller hero subtitle on mobile */
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    /* Stack hero buttons vertically on mobile */
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Smaller section titles on mobile */
+    .section-title {
+        font-size: 2rem;
+    }
+
+    /* Single column grids on mobile */
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stack research header on mobile */
+    .research-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Mobile profile photo */
+    .hero-image img {
+        width: 150px;
+        height: 150px;
+        border: 4px solid white;
+    }
+
+    /* Allow date to wrap on mobile */
+    .research-date {
+        white-space: normal;
+    }
+
+    /* Mobile CV button */
+    .btn-cv {
+        font-size: 1rem;
+        padding: 12px 28px;
+    }
+
+    /* Stack academic buttons on mobile */
+    .academic-item .btn-small {
+        display: block;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+}

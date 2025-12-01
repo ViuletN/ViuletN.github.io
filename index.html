@@ -1,0 +1,331 @@
+<!doctype html>
+<!-- Tells browser this is an HTML5 document -->
+
+<html lang="en">
+<!-- Root element, lang="en" helps search engines and screen readers -->
+
+<head>
+    <!-- Head section contains metadata (info about the page, not visible content) -->
+
+    <!-- Favicon: The small icon that appears in browser tabs -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%230058ff%22></rect><path fill=%22%23fff%22 d=%22M72.15 21.33L72.15 21.33Q74.49 22.50 74.90 25.02Q75.30 27.54 73.59 29.61L73.59 29.61Q72.42 31.23 70.58 31.41Q68.73 31.59 66.84 30.69L66.84 30.69Q64.68 29.70 62.30 29.16Q59.91 28.62 57.30 28.62L57.30 28.62Q52.44 28.62 48.62 30.15Q44.79 31.68 42.09 34.52Q39.39 37.35 38.00 41.22Q36.60 45.09 36.60 49.77L36.60 49.77Q36.60 55.26 38.18 59.31Q39.75 63.36 42.54 66.06Q45.33 68.76 49.11 70.07Q52.89 71.37 57.30 71.37L57.30 71.37Q59.73 71.37 62.16 70.92Q64.59 70.47 66.84 69.30L66.84 69.30Q68.73 68.40 70.58 68.67Q72.42 68.94 73.68 70.56L73.68 70.56Q75.48 72.81 74.99 75.20Q74.49 77.58 72.24 78.66L72.24 78.66Q69.90 79.83 67.43 80.60Q64.95 81.36 62.43 81.77Q59.91 82.17 57.30 82.17L57.30 82.17Q50.82 82.17 45.02 80.10Q39.21 78.03 34.67 73.98Q30.12 69.93 27.51 63.86Q24.90 57.78 24.90 49.77L24.90 49.77Q24.90 42.84 27.29 36.99Q29.67 31.14 34.04 26.87Q38.40 22.59 44.34 20.21Q50.28 17.82 57.30 17.82L57.30 17.82Q61.26 17.82 65.04 18.72Q68.82 19.62 72.15 21.33Z%22></path></svg>" />
+
+    <!-- Character encoding: Tells browser how to interpret text (UTF-8 supports all languages) -->
+    <meta charset="UTF-8">
+
+    <!-- Makes website responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Cache control: These tell browsers not to save old versions of your site -->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+
+    <!-- Links to your CSS file for styling -->
+    <link rel="stylesheet" href="css/master.css">
+
+    <!-- Page title: Shows in browser tab and search results -->
+    <title>Nicolas Viulet - Portfolio</title>
+</head>
+
+<body>
+<!-- Body contains all visible content -->
+
+<!-- ========== NAVIGATION BAR ========== -->
+<!-- Fixed navigation that stays at top when scrolling -->
+<nav id="navbar">
+    <!-- Container keeps content centered and at max width -->
+    <div class="nav-container">
+        <!-- Logo/name on the left -->
+        <a href="#" class="logo">Nicolas Viulet</a>
+
+        <!-- Navigation menu (Desktop view) -->
+        <ul class="nav-menu">
+            <!-- Each li is a menu item -->
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#research" class="nav-link">Research</a></li>
+            <li><a href="#academic" class="nav-link">Academic Work</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Hamburger menu (Mobile view) - three lines that open/close menu -->
+        <div class="hamburger">
+            <span></span> <!-- Top line -->
+            <span></span> <!-- Middle line -->
+            <span></span> <!-- Bottom line -->
+        </div>
+    </div>
+</nav>
+
+<!-- ========== HERO SECTION ========== -->
+<!-- First section visitors see - big introduction -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <!-- Main heading with your name -->
+        <h1 class="hero-title">Hi, I'm <span class="highlight">Nicolas Viulet</span></h1>
+
+        <!-- Profile Photo -->
+        <div class="hero-image">
+            <img src="images/Website_Photo.jpg" alt="Nicolas Viulet">
+        </div>
+
+        <!-- Subtitle describing what you do -->
+        <p class="hero-subtitle">MSc Candidate | Neuroscience Researcher</p>
+
+        <!-- Call-to-action buttons -->
+        <div class="hero-buttons">
+            <a href="#research" class="btn btn-primary">View My Research</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+    </div>
+</section>
+
+<!-- ========== ABOUT SECTION ========== -->
+<!-- Tell visitors about yourself -->
+<section id="about" class="section">
+    <!-- Container centers content and limits width -->
+    <div class="container">
+        <!-- Section heading -->
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm Nicolas Viulet, a neuroscience researcher currently pursuing my Master of Science at McMaster University, where I'm investigating the relationship between intracortical myelin and major depressive disorder. I'm passionate about understanding how the brain works and how we can leverage neuroimaging data to improve mental health outcomes, develop new diagnostic protocols, and improve therapeutic approaches for neurological disorders. I hope to develop my computational and clinical skills in neuroscience by working at the intersection of scientific research and clinical applications.</p>
+
+                <p>Beyond my current research, my background in Buddhism, Psychology, and Mental Health has shaped how I think about neuroscience—not just as a technical discipline, but as a way to understand the complexity human experience. I believe in the importance of interdisciplinary collaboration and integrating mindfulness into every aspect of my academic and personal life.</p>
+
+                <p>When I'm not analyzing brain imaging data or reading research papers, you'll probably find me experimenting in the kitchen or perfecting my coffee brewing technique. There's something deeply satisfying about the precision and creativity that goes into both cooking and making a great cup of coffee—not unlike designing a good experiment! I'm currently looking for opportunities to contribute to innovative neuroscience research and continue growing as both a scientist and a mentor.</p>
+            </div>
+
+            <!-- CV Download Button -->
+            <div class="cv-button-container">
+                <a href="Documents/CV.pdf" target="_blank" class="btn btn-cv" download>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download CV
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== RESEARCH EXPERIENCE SECTION ========== -->
+<!-- Showcase your research positions -->
+<section id="research" class="section section-dark">
+    <div class="container">
+        <h2 class="section-title">Research Experience</h2>
+
+        <!-- Grid that creates card layout for research positions -->
+        <div class="research-grid">
+
+            <!-- RESEARCH POSITION 1 -->
+            <div class="research-card">
+                <div class="research-header">
+                    <h3>EASE Lab - Affiliated Researcher</h3>
+                    <span class="research-date">Jan. 2025 - Present</span>
+                </div>
+                <p class="research-location">Toronto, ON</p>
+                <p class="research-description">
+                    Engaged in monthly interdisciplinary research meetings fostering collaboration between scientists, academics, health practitioners, and contemplative traditions focused on embodiment, attention, sensation, and engagement.
+                </p>
+                <div class="research-tags">
+                    <span class="tag">Interdisciplinary Research</span>
+                    <span class="tag">Contemplative Science</span>
+                </div>
+            </div>
+
+            <!-- RESEARCH POSITION 2 -->
+            <div class="research-card">
+                <div class="research-header">
+                    <h3>EMBRACE Project - Undergraduate Thesis Student</h3>
+                    <span class="research-date">Jul. 2024 - Apr. 2025</span>
+                </div>
+                <p class="research-location">Sunnybrook Health Sciences Centre, Toronto, ON</p>
+                <p class="research-description">
+                    Conducted systematic literature review following PRISMA guidelines to investigate functional connectivity changes in mood-related brain networks from psilocybin treatment in depression. Compiled neuroimaging data for meta-analysis using activation likelihood estimation (ALE) to support the EMBRACE clinical trial.
+                </p>
+                <div class="research-tags">
+                    <span class="tag">Systematic Review</span>
+                    <span class="tag">Neuroimaging</span>
+                    <span class="tag">Psychedelic Research</span>
+                    <span class="tag">Meta-Analysis</span>
+                </div>
+            </div>
+
+            <!-- RESEARCH POSITION 3 -->
+            <div class="research-card">
+                <div class="research-header">
+                    <h3>The BOLD Lab - Research Assistant</h3>
+                    <span class="research-date">Aug. 2023 - Aug. 2025</span>
+                </div>
+                <p class="research-location">University of Toronto, Toronto, ON</p>
+                <p class="research-description">
+                    Facilitated fNIRS data collection and administered standardized language psychometric tests on a cohort of 120+ refugee participants in the REF study. Trained new research assistants, maintained lab website, and developed Python scripts for data organization.
+                </p>
+                <div class="research-tags">
+                    <span class="tag">fNIRS</span>
+                    <span class="tag">Data Collection</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Psychometrics</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== ACADEMIC WORK SECTION ========== -->
+<!-- Showcase publications, presentations, and academic achievements -->
+<section id="academic" class="section">
+    <div class="container">
+        <h2 class="section-title">Academic Work</h2>
+
+        <!-- Academic categories -->
+        <div class="academic-container">
+
+            <!-- AWARDS SECTION -->
+            <div class="academic-category">
+                <h3 class="academic-heading">Awards & Recognition</h3>
+                <div class="academic-items">
+                    <div class="academic-item">
+                        <h4>Dean's List Scholar</h4>
+                        <p class="academic-detail">Faculty of Arts & Science, University of Toronto (2023, 2025)</p>
+                    </div>
+                    <div class="academic-item">
+                        <h4>The Dr. Lorus J. Milne and Dr. Margery J. Milne Research Award</h4>
+                        <p class="academic-detail">University of Toronto (2025)</p>
+                    </div>
+                    <div class="academic-item">
+                        <h4>Lincoln Hutton Essay Prize: Sciences</h4>
+                        <p class="academic-detail">University of Toronto (2025)</p>
+                        <a href="Documents/VIULETN_LH_AWARD.pdf" target="_blank" class="btn-small">Read Essay</a>
+                    </div>
+                    <div class="academic-item">
+                        <h4>James Morrow Scholarship</h4>
+                        <p class="academic-detail">University of Toronto (2023)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PUBLICATIONS SECTION -->
+            <div class="academic-category">
+                <h3 class="academic-heading">Publications</h3>
+                <div class="academic-items">
+                    <div class="academic-item">
+                        <h4>OCD and Predictive Processing: Remedying Reduced Self-Confidence and Negative Affect with Meditation</h4>
+                        <p class="academic-detail"><em>Under Review</em> - SPARK Health Student Journal</p>
+                        <p class="academic-authors">Viulet, N.</p>
+                    </div>
+                    <div class="academic-item">
+                        <h4>Effects of Aerobic Exercise on the Brain: Benefits for Parkinson's Disease Patients</h4>
+                        <p class="academic-detail"><em>Published</em> - Project Wellness Student Journal, Issue 4, pp. 36-44 (December 2023)</p>
+                        <p class="academic-authors">Viulet, N.</p>
+                        <a href="https://heyzine.com/flip-book/6704ae2bbe.html#page/37" target="_blank" class="btn-small">View Publication</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRESENTATIONS SECTION -->
+            <div class="academic-category">
+                <h3 class="academic-heading">Presentations</h3>
+                <div class="academic-items">
+                    <div class="academic-item">
+                        <h4>Magic Mushrooms: A New Frontier in Mental Health</h4>
+                        <p class="academic-detail">Poster Presentation - Victoria College Research Day, Toronto, ON (March 2025)</p>
+                        <p class="academic-authors">Viulet, N.</p>
+                        <a href="Documents/VIC_RESEARCHDAY_POSTER.pdf" target="_blank" class="btn-small">View Poster</a>
+                        <a href="https://vimeo.com/1074093085" target="_blank" class="btn-small">Watch Interview</a>
+                    </div>
+                    <div class="academic-item">
+                        <h4>Acute Functional Brain Changes Associated with Psilocybin in Healthy Adults and Depression: A systematic review and meta-analysis</h4>
+                        <p class="academic-detail">Poster Presentation - University of Toronto Department of Psychiatry and SRI (Sunnybrook Research Institute) research Day, Toronto, ON (June and July 2025)</p>
+                        <p class="academic-authors">Viulet, N.</p>
+                        <a href="Documents/SysReview_Poster_1.pdf" target="_blank" class="btn-small">View Poster</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- THESIS WORK SECTION -->
+            <div class="academic-category">
+                <h3 class="academic-heading">Thesis Work</h3>
+                <div class="academic-items">
+                    <div class="academic-item">
+                        <h4>Master's Thesis (Ongoing)</h4>
+                        <p class="academic-detail"><strong>Title:</strong> Investigating the relationship between intracortical myelin and major depressive disorder (MDD)</p>
+                        <p class="academic-authors"><strong>Supervisor:</strong> Dr. Nicholas Bock, McMaster University</p>
+                    </div>
+                    <div class="academic-item">
+                        <h4>Undergraduate Thesis</h4>
+                        <p class="academic-detail"><strong>Title:</strong> Acute Functional Brain Changes Associated with Psilocybin in Depression: a protocol for a systematic review and meta-analysis</p>
+                        <p class="academic-authors"><strong>Supervisor:</strong> Dr. Sean Nestor, University of Toronto</p>
+                        <a href="Documents/UGTHESIS_VIULETN.pdf" target="_blank" class="btn-small">Read  Thesis</a>
+                        <a href="Documents/SupplementaryData.docx" target="_blank" class="btn-small">Supplementary Data</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CONTACT SECTION ========== -->
+<!-- Let visitors send you messages -->
+<section id="contact" class="section section-dark">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+
+        <div class="contact-content">
+            <!-- Invitation message -->
+            <p class="contact-text">I'm currently looking for research opportunities and collaborations. Whether you have a question or just want to connect, feel free to reach out!</p>
+
+            <!-- Contact form -->
+            <!-- id="contact-form" lets JavaScript handle form submission -->
+            <form id="contact-form" class="contact-form">
+                <!-- Name input field -->
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <!-- required means this field must be filled out -->
+                </div>
+
+                <!-- Email input field -->
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <!-- type="email" validates that input is an email format -->
+                </div>
+
+                <!-- Message textarea (bigger text box) -->
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <!-- rows="5" sets height of text area -->
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+
+            <!-- Social media links -->
+            <div class="social-links">
+                <!-- Replace these with your actual social media URLs -->
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <!-- target="_blank" opens link in new tab -->
+                <a href="https://www.linkedin.com/in/nicolasviulet" target="_blank">LinkedIn</a>
+                <a href="mailto:viuletn@mcmaster.ca">Email</a>
+                <!-- mailto: creates email link that opens email client -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<!-- Bottom of page with copyright -->
+<footer>
+    <p class="copyright-text">© Copyright 2025 Nicolas Viulet. All rights reserved.</p>
+</footer>
+
+<!-- JavaScript file - loads last so HTML loads first -->
+<!-- This makes page interactive -->
+<script src="js/main.js"></script>
+</body>
+</html>
